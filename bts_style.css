@@ -246,7 +246,7 @@ body {
     padding: 1.5rem;
 }
 
-.project-content h3 {
+.project-content h2 {
     color: #ffd700;
     margin-bottom: 1rem;
 }
@@ -333,6 +333,10 @@ html {
 
 .nav-menu a.active::after {
     width: 100%;
+}
+
+.project-title {
+    color: #ffffff;
 }
 
 
