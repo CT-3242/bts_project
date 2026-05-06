@@ -23,5 +23,143 @@
             </ul>
         </div>
     </nav>
+
+
+<section class="first-internship section">
+    <div>
+        <h2>MAIRIE DE SAINT-AVÉ</h2>
+    </div>
+    <div>
+        <h2>DATE</h2>
+        <p>19 MAI 2025 - 27 JUIN 2025</p>
+    </div>
+    <div>
+        <h2>LIEU</h2>
+        <p>SAINT-AVÉ (56)</p>
+    </div>
+    <div>
+        <h2>TECHNOLOGIES</h2>
+        <div>
+            <div>
+                <a>html</a>
+            </div>
+            <div>
+                <a>css</a>
+            </div>
+        </div>
+    </div>
+    <div>
+        <h2>DESCRIPTION</h2>
+        <h2>SECTEUR</h2>
+<p>SECTEUR PUBLIC</p>
+<p>1 DIRECTEUR DE SERVICE 1 DVELOPP 1 TECHNICIEN</p>
+    </div>
+    <div>
+        <h2>RESSOURCES</h2>
+        <div class="bts">
+            <table>
+                <thead>
+                    <tr>
+                    <th>RESSOURCES</th>
+                    <th>LIENS</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>PLAN FONCTIONNEMENT APPLICATION</td>
+                        <td><a href="">PLAN</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div>
+        <h2>COMPÉTENCES</h2>
+        <div>
+            <table>
+                <thead>
+                    <tr>
+                    <th>BLOCS</th>
+                    <th>COMPÉTENCES</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>B1.1</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                    <td>B1.4</td>
+                    <td></td>
+                    </tr>
+                    <tr>
+                    <td>B1.5</td>
+                    <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div>
+        <h2>MISSIONS</h2>
+        <h2>APPLICATION POUR SMARTPHONE</h2>
+        <h2>TECHNOLOGIES</h2>
+        <p>
+            Recevoir les notification si les incidents sont avec différentes données différents sons pour les types dincidents si le smartphone est connecté (nécessite constament la cooexion)
+je devais développer lapplication en autonomie Dans le service personnes ne connaissaient le développemetn avec KOTLIN utile pour gérer les autorisations de lOS comme le volue nécessaire pour être notifier si le smatphone est distant
+Je connaissias les bases en KOTLIN principalement pour le développement de lUI Je ne conaiisias pas enciore le fonctionnement de notification Lautonimie
+me permettait de pouvoir être libre mais je devais aussi me documenter seul La documentation utilisé pour comprendre
+les notifications était obsoletes GOOGLE avec son IA avait stopper les updates Il conseillait dutiliser leur IA pour gérer le développement
+PREMIÈRE TENTATIVE
+Je pensais pouvoir utiliser KOTLIN pour vérifier lexistence du lien avec la méthode HTTP HEAD tous les X secondes pour construire le message en JSON aevc lURL
+mais je me suis heuté aux sécurités de lOS Il nautorisait pas les applications de communiquer trop longtemps en plus de stopper les applications pour éviter lutilisation de trop
+de ressources hardeware Evidement vérifier lURL ne poserait pas de problème mais je ne pouvais passer outre cette sécurité
+DEUXIÈME TENTATIVE
+Je décidia de créer avec NODEJS le serveur pour vérifier lURL Connaissant déjà la technologie il était plus aisé de développer les différentes parties Je maidai de différents
+sites de développement et de lIA pour mofier les routes pour transférer les données
+Je ne possédais pas de cahier des charges mon maitre de stage mavait expliquer les besoins de lapplication Le début fut compliquer pour comprendre les besoons e lapplication De plus être en autonomie est désaventageux Je ne pouvais pas demander aux développeur dapplication
+Je pensais pouvoir utiliser le serveur pour vérifier le lien puis transmettre avec le serveur le lien en HTTP (les personnes pouvaent être en extérieur) puis construire la notification dans lapplication
+Lapplication devait transférer son TOKEN au serveur pour pouvoir identifier les smartphones
+La dépendance de lapplication dans lutilisation de FCM pouvias poser Le service ne pouvait pas avoir de controle
+je tentai de créer le fichier A pour linstammer dans le smartphone mais le stage se terminant je ne pu vérifier son installation Cependnat je documentai sa création dans lIDE pour laisser les prochaines personnes continuer le développement</p>
+<p>TROISIÈME TENTATIVE
+LIA maidai pour la création de notification
+Deux possibilité
+Créer la notification dans la smartphone avec ses composants
+Transferer les données contenu dans le serveur vers le serveur de notification pour transfer la push notification vers le smartphone
+La solution forcais lutilisation de FCM Pourquoi Maintenir une connexion ouverte entre le serveur et les smartphnes viderait la batterie des utilisateurs
+SERVEUR FCM SMARTPHONE
+FCM sert de pont basse consomation Il est indispensable pour assurer la liaison avec lOS
+Ironiquement je découvrais le fonctionnement de route de requête HTTP de données en JSON pluisuers mois avant de le voir en plus de comprendre les bases incomprises lors de la création de lapplication</p>
+<p>Le directeur me donnait de nouvelles fonctionnalités
+En plus de pouvoir recevoir les notiifcations avec les données je devais créer le formulaire avec les informations de la notification (dropdown menu avec les choix) pour la transférer aux autres personens comme le broadcast IP
+Je devais aussi tester si le fichier APK sinstallait Je créai le fichier puis documentai pour laisser les autres le faire si besoin
+Cependant je nai pas pu les développer entierement</p>
+
+<h2>CONFIGURATION DE SWITCH (VISUELLEMENT)</h2>
+<p>Durrant la période jaccompagnais le technicien dans le centre de arde Il devait mettre en place la salle pour les inscription en camps de vacances pour les enfnats Il mexpliqua le besooin de modifer les ports du switch pour rediriger les données vers la nouvelle prise de limprimante Cette situation permus de voir la configuration de salle avec les besoisn du service
+La configuration de switch ne faisait aps partie de ma formation mais en fonction de la structure je poourrais être forcé de le faire</p>
+
+<h2>CONFIGURATION DE SALLE</h2>
+<p>
+    Les élus de la ville se regroupant pour parler de projet utilisait la salle de la mairie
+Il était important de vérifier létat de la salle en plus de ses insyallations
+Nous (avec le stagiare) aidions le technicen pour controler les microphones le post utilisé pour projeter les documents Cette situation me permis de voir le role du technicien dans la mairie
+Le contrôle de léquipement et important soit pour régler les problèmes techniques soit en prévision
+</p>
+DÉVELOPPEMENT DE SITE POUR LA MAIRIE (VISUELLEMENT)
+    </div>
+    <div>
+        <div>
+            <h2>APPLICATION POUR SMARTPHONE</h2>
+        <p>
+Le fait de ne pas pouvoir être aidé me mis en difficulté dans certains moments du développement de lapplication
+IDENTIFICATION DE PROBL</p>
+<p>Développement de lapplication pour les smartphones sous KOTLIN pour recevoir les notifications avc les sons le lien pour voir les informations pour les incidents</p>
+</div>
+    </div>
+    <div>
+        <h2>DIFFICULTÉS</h2></div>
+</section>
     </body>
 </html>
