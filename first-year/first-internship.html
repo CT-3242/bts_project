@@ -39,20 +39,37 @@
     </div>
     <div>
         <h2>TECHNOLOGIES</h2>
-        <div>
+        <div class="technologies">
             <div>
-                <a>html</a>
+                <a class="uppercase tech">html</a>
             </div>
             <div>
-                <a>css</a>
+                <a class="uppercase tech">css</a>
             </div>
+            <div>
+<a class="uppercase tech">javascript</a>
+</div>
+<div>
+<a class="uppercase tech">php</a>
+</div>
+<div>
+<a class="uppercase tech">windows</a>
+</div>
         </div>
     </div>
     <div>
         <h2>DESCRIPTION</h2>
+        <p>
+            La mairie est une collectivité territoriale au cœur de l'administration publique. Contrairement au secteur privé, dont la finalité est lucrative, les missions de la mairie sont de proposer différents service de proximité pour les citoyens (état civil, urbanisme, écoles).</p>
+<p>Jai effectué mon stage au sein du service DSIO (Direction des Systèmes d'Information et d'Organisation) Ce service est le pilier technologique de la collectivité. Ses missions principales sont</p>
+<p>La gestion du parc informatique en assurer le déploiement, la maintenance et l'évolution des installations techniques dans les différents services de la mairie et dans la ville.</p>
+<p>Administrer et mettre à jour les sites web de la commune pour garantir l'accès à l'information et aux démarches administratives en ligne.</p>
+Accompagner les agents municipaux dans l'utilisation de technologies pour garantir la continuité du service public.
+        </p>
         <h2>SECTEUR</h2>
 <p>SECTEUR PUBLIC</p>
-<p>1 DIRECTEUR DE SERVICE 1 DVELOPP 1 TECHNICIEN</p>
+<h2>SERVICE</h2>
+<p>1 DIRECTEUR DE SERVICE 1 DÉVELOPP 1 TECHNICIEN</p>
     </div>
     <div>
         <h2>RESSOURCES</h2>
@@ -65,6 +82,10 @@
                     </tr>
                 </thead>
                 <tbody>
+                    <tr>
+                        <td>PLAN FONCTIONNEMENT APPLICATION</td>
+                        <td><a href="">PLAN</a></td>
+                    </tr>
                     <tr>
                         <td>PLAN FONCTIONNEMENT APPLICATION</td>
                         <td><a href="">PLAN</a></td>
@@ -104,17 +125,27 @@
         <h2>MISSIONS</h2>
         <h2>APPLICATION POUR SMARTPHONE</h2>
         <h2>TECHNOLOGIES</h2>
+        <div class="technologies">
+            <div>
+                <a class="uppercase tech">kotlin</a>
+            </div>
+            <div>
+                <a class="uppercase tech">nodejs</a>
+            </div>
+            <div>
+                <a class="uppercase tech">firebase</a>
+            </div>
+        </div>
         <p>
-            Recevoir les notification si les incidents sont avec différentes données différents sons pour les types dincidents si le smartphone est connecté (nécessite constament la cooexion)
-je devais développer lapplication en autonomie Dans le service personnes ne connaissaient le développemetn avec KOTLIN utile pour gérer les autorisations de lOS comme le volue nécessaire pour être notifier si le smatphone est distant
-Je connaissias les bases en KOTLIN principalement pour le développement de lUI Je ne conaiisias pas enciore le fonctionnement de notification Lautonimie
-me permettait de pouvoir être libre mais je devais aussi me documenter seul La documentation utilisé pour comprendre
-les notifications était obsoletes GOOGLE avec son IA avait stopper les updates Il conseillait dutiliser leur IA pour gérer le développement
-PREMIÈRE TENTATIVE
-Je pensais pouvoir utiliser KOTLIN pour vérifier lexistence du lien avec la méthode HTTP HEAD tous les X secondes pour construire le message en JSON aevc lURL
-mais je me suis heuté aux sécurités de lOS Il nautorisait pas les applications de communiquer trop longtemps en plus de stopper les applications pour éviter lutilisation de trop
-de ressources hardeware Evidement vérifier lURL ne poserait pas de problème mais je ne pouvais passer outre cette sécurité
-DEUXIÈME TENTATIVE
+            Durant la période jai du développer en autonomie lapplication pour smartphone pour recevoir notifications avec les informations concernat les incidents dans la ville Ele serait sur les OS ANDROID puis IOS
+Le service ne possaidait pas dexpertise interne en développement dapplication pour smartphone
+Pour développer cette application je passai à travers trois phases pour surmonter les contraintes techniques
+        </p>
+<p>PREMIÈRE TENTATIVE
+Je pensais pouvoir utiliser KOTLIN pour vérifier lexistence du lien avec la méthode HTTP HEAD tous les X secondes (POLLING) pour construire le message en JSON avec lURL
+mais je me suis heuté aux sécurités de lOS (DOZE MODE) Il nautorisait pas les applications de communiquer trop longtemps en plus de stopper les applications pour éviter lutilisation de trop
+de ressources hardeware Evidement vérifier lURL ne poserait pas de problème mais je ne pouvais passer outre cette sécurité</p>
+<p>DEUXIÈME TENTATIVE
 Je décidia de créer avec NODEJS le serveur pour vérifier lURL Connaissant déjà la technologie il était plus aisé de développer les différentes parties Je maidai de différents
 sites de développement et de lIA pour mofier les routes pour transférer les données
 Je ne possédais pas de cahier des charges mon maitre de stage mavait expliquer les besoins de lapplication Le début fut compliquer pour comprendre les besoons e lapplication De plus être en autonomie est désaventageux Je ne pouvais pas demander aux développeur dapplication
@@ -147,19 +178,22 @@ Il était important de vérifier létat de la salle en plus de ses insyallations
 Nous (avec le stagiare) aidions le technicen pour controler les microphones le post utilisé pour projeter les documents Cette situation me permis de voir le role du technicien dans la mairie
 Le contrôle de léquipement et important soit pour régler les problèmes techniques soit en prévision
 </p>
-DÉVELOPPEMENT DE SITE POUR LA MAIRIE (VISUELLEMENT)
+
+<h2>DÉVELOPPEMENT DE SITE POUR LA MAIRIE (VISUELLEMENT)</h2>
+<p>Le développeur devait modifier le site pour les  inscriptions pour les enfnats de la ville Il avait développer le site en PHP avec la database Sa mission était de remettre en ligne les pages
+Cela ma permis de voir comment le développeur gérait les sites de la mairie en plus de voir lenvironnement de développment et ses choix technologiques pour les projets</p>
     </div>
+    <div></div>
     <div>
-        <div>
-            <h2>APPLICATION POUR SMARTPHONE</h2>
+        <h2>DIFFICULTÉS</h2>
         <p>
-Le fait de ne pas pouvoir être aidé me mis en difficulté dans certains moments du développement de lapplication
-IDENTIFICATION DE PROBL</p>
-<p>Développement de lapplication pour les smartphones sous KOTLIN pour recevoir les notifications avc les sons le lien pour voir les informations pour les incidents</p>
-</div>
+            Compréhension de la gestion de cycle pour les applications
+Se former pour utiliser les composants de lOS
+Obsolescence de la documentation
+Confusion de lIA
+Labsnece daide ma forcé à comprendre réellement le fonctionnement de lOS
+        </p>
     </div>
-    <div>
-        <h2>DIFFICULTÉS</h2></div>
 </section>
     </body>
 </html>
