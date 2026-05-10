@@ -60,16 +60,15 @@
     <div>
         <h2>DESCRIPTION</h2>
         <p>
-            La mairie est une collectivité territoriale au cœur de l'administration publique. Contrairement au secteur privé, dont la finalité est lucrative, les missions de la mairie sont de proposer différents service de proximité pour les citoyens (état civil, urbanisme, écoles).</p>
-<p>Jai effectué mon stage au sein du service DSIO (Direction des Systèmes d'Information et d'Organisation) Ce service est le pilier technologique de la collectivité. Ses missions principales sont</p>
-<p>La gestion du parc informatique en assurer le déploiement, la maintenance et l'évolution des installations techniques dans les différents services de la mairie et dans la ville.</p>
+            La mairie est une collectivité territoriale au cœur de l'administration publique. Contrairement au secteur privé, dont la finalité est lucrative, les missions de la mairie sont de proposer différents services de proximités pour les citoyens (état civil, urbanisme, écoles).</p>
+<p>Jai effectué mon stage au sein du service DSIO (Direction des Systèmes d'Information et d'Organisation) Ce service est le pilier technologique de la collectivité. Ses missions sont</p>
+<p>La gestion du parc informatique en assurant le déploiement, la maintenance et l'évolution des installations dans les différents services de la mairie et dans la ville.</p>
 <p>Administrer et mettre à jour les sites web de la commune pour garantir l'accès à l'information et aux démarches administratives en ligne.</p>
-Accompagner les agents municipaux dans l'utilisation de technologies pour garantir la continuité du service public.
-        </p>
+<p>Accompagner les agents municipaux dans l'utilisation de technologies pour garantir la continuité du service public.</p>
         <h2>SECTEUR</h2>
 <p>SECTEUR PUBLIC</p>
 <h2>SERVICE</h2>
-<p>1 DIRECTEUR DE SERVICE 1 DÉVELOPP 1 TECHNICIEN</p>
+<p>1 DIRECTEUR DE SERVICE 1 DÉVELOPPEUR 1 TECHNICIEN</p>
     </div>
     <div>
         <h2>RESSOURCES</h2>
@@ -137,39 +136,48 @@ Accompagner les agents municipaux dans l'utilisation de technologies pour garant
             </div>
         </div>
         <p>
-            Durant la période jai du développer en autonomie lapplication pour smartphone pour recevoir notifications avec les informations concernat les incidents dans la ville Ele serait sur les OS ANDROID puis IOS
-Le service ne possaidait pas dexpertise interne en développement dapplication pour smartphone
-Pour développer cette application je passai à travers trois phases pour surmonter les contraintes techniques
+            Durant la période jai du développer en autonomie lapplication pour smartphone devant recevoir les notifications avec les informations concernant les incidents se passant dans la ville</p>
+            <p>Elle serait utilisé sur lOS ANDROID puis IOS</p>
+<p>Le service ne possaidait pas dexpertise interne en développement dapplication pour smartphone, il était donc impossible de me faire aider.
+Je ne possédais pas de cahier des charges pour comprendre le contexte ou la liste de fonctionnalités Mon maitre de stage mavait expliquer les besoins de lapplication mais concevoir le projet de zero était bien plus difficile
+Le projet était de développer lapplication sous la technologie KOTLIN (utilisé pour le développement ANDROID) Elle devait vérifier lexistence du fichier contenant les informations de lincident avec son URL. Puis il devait créer la notification avec les informations.
+Pour développer cette application je passai à travers trois phases pour surmonter les contraintes techniques.
         </p>
-<p>PREMIÈRE TENTATIVE
-Je pensais pouvoir utiliser KOTLIN pour vérifier lexistence du lien avec la méthode HTTP HEAD tous les X secondes (POLLING) pour construire le message en JSON avec lURL
-mais je me suis heuté aux sécurités de lOS (DOZE MODE) Il nautorisait pas les applications de communiquer trop longtemps en plus de stopper les applications pour éviter lutilisation de trop
-de ressources hardeware Evidement vérifier lURL ne poserait pas de problème mais je ne pouvais passer outre cette sécurité</p>
-<p>DEUXIÈME TENTATIVE
-Je décidia de créer avec NODEJS le serveur pour vérifier lURL Connaissant déjà la technologie il était plus aisé de développer les différentes parties Je maidai de différents
-sites de développement et de lIA pour mofier les routes pour transférer les données
-Je ne possédais pas de cahier des charges mon maitre de stage mavait expliquer les besoins de lapplication Le début fut compliquer pour comprendre les besoons e lapplication De plus être en autonomie est désaventageux Je ne pouvais pas demander aux développeur dapplication
-Je pensais pouvoir utiliser le serveur pour vérifier le lien puis transmettre avec le serveur le lien en HTTP (les personnes pouvaent être en extérieur) puis construire la notification dans lapplication
-Lapplication devait transférer son TOKEN au serveur pour pouvoir identifier les smartphones
-La dépendance de lapplication dans lutilisation de FCM pouvias poser Le service ne pouvait pas avoir de controle
-je tentai de créer le fichier A pour linstammer dans le smartphone mais le stage se terminant je ne pu vérifier son installation Cependnat je documentai sa création dans lIDE pour laisser les prochaines personnes continuer le développement</p>
-<p>TROISIÈME TENTATIVE
-LIA maidai pour la création de notification
-Deux possibilité
-Créer la notification dans la smartphone avec ses composants
-Transferer les données contenu dans le serveur vers le serveur de notification pour transfer la push notification vers le smartphone
-La solution forcais lutilisation de FCM Pourquoi Maintenir une connexion ouverte entre le serveur et les smartphnes viderait la batterie des utilisateurs
-SERVEUR FCM SMARTPHONE
-FCM sert de pont basse consomation Il est indispensable pour assurer la liaison avec lOS
-Ironiquement je découvrais le fonctionnement de route de requête HTTP de données en JSON pluisuers mois avant de le voir en plus de comprendre les bases incomprises lors de la création de lapplication</p>
+
+<h4>PREMIÈRE TENTATIVE</h4>
+<p>Je pensais pouvoir utiliser les méthodes de KOTLIN pour vérifier lexistence du lien avec la méthode HTTP HEAD tous les X secondes (POLLING) puis utiliser la méthode GET pour télécharger le fichier ou copier les données pour construire la notification avec lURL.
+Mais je me suis heurté aux sécurités de lOS (DOZE MODE). Ce mode restreint les communications extérieurs en plus de suspendre les processus en arrière-
+plan pour économiser les ressources et la batterie Aussi il était impossible de maintenir ce processus en permanence sans être bloqué Evidement vérifier lURL ne poserait pas de problème mais je ne pouvais passer outre cette sécurité</p>
+
+<h4>DEUXIÈME TENTATIVE</h4>
+<p>Ne pouvant pas utiliser lapplication pour vérifier lexistence du lien je devais impérativement changer de méthode comme créer le serveur pour le faire</p>
+<p>Je décidai de créer le serveur avec NODEJS pour contourner le problème de vérification Je pensais pouvoir lutiliser pour vérifier le lien puis transmettre en HTTP les données (je devais aussi pouvoir transmettre le message pour les personnes pouvant être en extérieur) puis construire la notification dans lapplication
+    Connaissant déjà la technologie il était plus aisé de développer les différentes parties
+    Je maidai de différents
+sites de développement et de lIA pour créer les routes pour transférer les données en JSON
+[je tentai de créer le fichier A pour linstammer dans le smartphone mais le stage se terminant je ne pu vérifier son installation Cependnat je documentai sa création dans lIDE pour laisser les prochaines personnes continuer le développement]</p>
+
+<h4>TROISIÈME TENTATIVE</h4>
+<p>Pendant le développment du serveur je compris le fonctionnement de notification en utilisant la connexion du smartphone. Dans les circonstances habituelles chaque application devriat installer son composant pour relier leur serveur aux application mais cela nécessiterait constament de coonecter les projets comme avec les web socket</p>
+<p>LIA maidait pour la création de notification. Les classes avec ses méthodes avaient changé, la documentation était obsolete et GOOGLE conseillait dutiliser leur IA pour développer les applications
+    Je disposais de deux possibilités pour créer les notifications
+    Créer la notification dans le smartphone avec les composants ANDROID ou
+Transferer les données contenu dans le serveur vers FCM (le serveur de notification) puis les transferer (de la "push notification") vers le smartphone.
+La solution forcait lutilisation de FCM Pourquoi Maintenir une connexion ouverte entre le serveur et les smartphnes viderait la batterie des utilisateurs Pour éviter cela le serveur FCM avec ses composants installé transférait les messages si il reçoit les données avec lidentifiant du smartphone
+Lapplication devait transférer son TOKEN au serveur pour pouvoir identifier les smartphones lors du transfert vers FCM</p>
+<p>La dépendance de lapplication dans lutilisation de FCM pouvait poser problème pour les données transitant sur les serveurs de FIREBASE Le service ne pouvait pas avoir de controle Elles pourraient être stocké ou utilisé sans autorisation
+Comme lillustre le plan 4 FCM sert de pont basse consomation Il est indispensable pour assurer la liaison avec lOS
+Ironiquement je découvrais aussi le fonctionnement de route de requête HTTP de données en JSON plusieurs mois avant de le voir</p>
+
+<h4>NOUVELLES FONCTIONNALITÉS</h4>
 <p>Le directeur me donnait de nouvelles fonctionnalités
-En plus de pouvoir recevoir les notiifcations avec les données je devais créer le formulaire avec les informations de la notification (dropdown menu avec les choix) pour la transférer aux autres personens comme le broadcast IP
+En plus de pouvoir recevoir les notifcations avec les données je devais créer le formulaire avec les informations de la notification (dropdown menu avec les choix) pour la transférer aux autres personens comme le broadcast IP
 Je devais aussi tester si le fichier APK sinstallait Je créai le fichier puis documentai pour laisser les autres le faire si besoin
 Cependant je nai pas pu les développer entierement</p>
 
 <h2>CONFIGURATION DE SWITCH (VISUELLEMENT)</h2>
-<p>Durrant la période jaccompagnais le technicien dans le centre de arde Il devait mettre en place la salle pour les inscription en camps de vacances pour les enfnats Il mexpliqua le besooin de modifer les ports du switch pour rediriger les données vers la nouvelle prise de limprimante Cette situation permus de voir la configuration de salle avec les besoisn du service
-La configuration de switch ne faisait aps partie de ma formation mais en fonction de la structure je poourrais être forcé de le faire</p>
+<p>Durrant la période jaccompagnais le technicien dans le centre de garde Il devait mettre en place la salle pour les inscription en camps de vacances pour les enfnats Il mexpliqua le besooin de modifer les ports du switch pour rediriger les données vers la nouvelle prise de limprimante Cette situation permus de voir la configuration de salle avec les besoisn du service
+La configuration de switch ne faisait pas partie de ma formation mais en fonction de la structure je pourrais être forcé de le faire</p>
 
 <h2>CONFIGURATION DE SALLE</h2>
 <p>
@@ -180,19 +188,18 @@ Le contrôle de léquipement et important soit pour régler les problèmes techn
 </p>
 
 <h2>DÉVELOPPEMENT DE SITE POUR LA MAIRIE (VISUELLEMENT)</h2>
-<p>Le développeur devait modifier le site pour les  inscriptions pour les enfnats de la ville Il avait développer le site en PHP avec la database Sa mission était de remettre en ligne les pages
+<p>Le développeur devait modifier le site pour les  inscriptions pour les enfants de la ville Il avait développer le site en PHP avec la database Sa mission était de remettre en ligne les pages
 Cela ma permis de voir comment le développeur gérait les sites de la mairie en plus de voir lenvironnement de développment et ses choix technologiques pour les projets</p>
     </div>
-    <div></div>
     <div>
         <h2>DIFFICULTÉS</h2>
-        <p>
-            Compréhension de la gestion de cycle pour les applications
-Se former pour utiliser les composants de lOS
-Obsolescence de la documentation
-Confusion de lIA
-Labsnece daide ma forcé à comprendre réellement le fonctionnement de lOS
-        </p>
+        <ul>
+            <li>Compréhension de la gestion de cycle pour les applications</li>
+            <li>Se former pour utiliser les composants de lOS</li>
+            <li>Obsolescence de la documentation</li>
+            <li>Confusion de lIA</li>
+            <li>Labsence daide mais cela ma forcé à comprendre réellement le fonctionnement de lOS</li>
+        </ul>
     </div>
 </section>
     </body>
